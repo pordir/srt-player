@@ -1,0 +1,240 @@
+.nav {
+  grid-column: 1 / 4;
+  border-bottom: 1px solid;
+  border-color: var(--black-400);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  cursor: pointer;
+  color: var(--black-500);
+  height: 100%;
+  :global(.material-icons) {
+    line-height: var(--nav-height);
+  }
+  padding: 0 6px;
+  &:global(.disabled) {
+    color: #ebebeb;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background: var(--bc-lighter);
+      color: #000;
+    }
+  }
+}
+
+:global(.no-subtitle) {
+  .icon:global(.closed_caption_off) {
+    display: none;
+  }
+}
+:global(.no-video) {
+  .nav {
+    grid-column: 1 / 2;
+  }
+  .icon:global(.graphic_eq) {
+    display: none;
+  }
+}
+
+.name {
+  height: 100%;
+  line-height: var(--nav-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.right {
+  .icon {
+    position: relative;
+    display: inline-block;
+    &:last-child {
+      margin-right: 0;
+    }
+    .delay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      color: var(--red-500);
+      font-size: 9px;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+    }
+  }
+}
+
+.settings,
+.info {
+  display: grid;
+  grid-template-columns: minmax(50px, auto) 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.settings {
+  gap: 24px 32px;
+
+  .title {
+  }
+
+  .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    input[type='text'] {
+      border: 1px solid var(--black-400);
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+      padding-bottom: 1px;
+      width: 100px;
+      &:focus {
+        outline: none;
+        border-color: var(--blue-600);
+        border-width: 0 0 2px 0;
+        padding-bottom: 0;
+      }
+    }
+    :global(.material-icons):global(.checkbox) {
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--black-300);
+      &:global(.checked) {
+        color: var(--blue-600);
+      }
+    }
+    :global(.material-icons):global(.clear) {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      font-size: 16px;
+      color: var(--black-300);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--black-800);
+        }
+      }
+    }
+  }
+}
+
+.shortcuts {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.3cols {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+
+  :global(.column) {
+    padding: 10px;
+    border: 1px solid var(--bc-lighter);
+    border-radius: 10px;
+
+    :global(.column-title) {
+      text-align: center;
+      height: 30px;
+      line-height: 30px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+:global(.no-subtitle) {
+  .3cols {
+    :global(.column):global(.subtitle) {
+      display: none;
+    }
+  }
+}
+
+.info {
+  grid-template-columns: minmax(0, auto) auto;
+  .title {
+    display: flex;
+    color: rgb(150, 159, 175);
+    .key {
+      display: flex;
+      min-width: 12px;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(-225deg, rgb(213, 219, 228), rgb(248, 248, 248));
+      box-shadow: rgb(205, 205, 230) 0px -2px 0px 0px inset, rgb(255, 255, 255) 0px 0px 1px 1px inset,
+        rgba(30, 35, 90, 0.4) 0px 1px 2px 1px;
+      border-radius: 3px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .right-click {
+      border-radius: 3px;
+      padding: 5px;
+      background: var(--bc-lighter);
+    }
+
+    span[class='material-icons'] {
+      font-size: 16px;
+    }
+  }
+
+  .body {
+  }
+}
+
+.waveform {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  .waveform-option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--black-600);
+    :global(.material-icons) {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+    font-size: 16px;
+    .main {
+      margin-right: 8px;
+    }
+    .sub {
+      color: var(--black-400);
+    }
+    &.active {
+      color: var(--black-900);
+    }
+  }
+}
+
+.progress {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--black-800);
+  text-align: center;
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: var(--blue-600);
+    transition: width 0.2s;
+  }
+}

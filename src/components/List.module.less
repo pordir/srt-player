@@ -1,0 +1,95 @@
+@height: 32px;
+
+.list {
+  font-size: 16px;
+
+  .item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, auto);
+    gap: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: @height;
+    line-height: @height;
+
+    &:nth-child(odd) {
+      background: var(--bc-lighter);
+    }
+
+    .file-name {
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .label {
+      font-variant-numeric: tabular-nums;
+      font-size: 14px;
+    }
+
+    .icon {
+      width: 15px;
+      cursor: pointer;
+      color: var(--red-500);
+      line-height: @height;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      width: var(--watch-progress);
+      background: var(--blue-600);
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.download-example {
+  margin: 20px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  :global(.material-icons-outlined) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .message-box {
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: var(--blue-050);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 6px solid var(--blue-600);
+
+    .example-list {
+      margin-top: 5px;
+      .list-item {
+        list-style: inside;
+      }
+      .downloading {
+        a {
+          text-decoration: none;
+          cursor: wait;
+        }
+        .progress {
+          display: inline;
+          margin-left: 10px;
+        }
+      }
+      .finished {
+        display: none;
+      }
+      .progress {
+        display: none;
+      }
+    }
+  }
+}

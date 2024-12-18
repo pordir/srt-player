@@ -1,0 +1,96 @@
+{
+  "import_video_and_subtitle": {
+    "drag": "拖拽视频与字幕文件到这里",
+    "browse": "浏览文件",
+    "or": "或",
+    "save": "保存",
+    "save_cache": "复制文件到缓存"
+  },
+  "play_list": {
+    "download_example": "播放列表为空，要下载一些示例吗？",
+    "example": "示例 {0}",
+    "downloading": "下载中..."
+  },
+  "footer": {
+    "current_version": "当前版本",
+    "update": "升级",
+    "feedback": "反馈",
+    "feedback_email": "如果你有遇到bug，有使用上的建议或者任何问题，都可以通过下面的邮箱反馈给我：",
+    "feedback_video": "也可以在这个视频下面的评论区留言：",
+    "video_url": "https://www.bilibili.com/video/BV1Ci4y1d7iA/"
+  },
+  "nav": {
+    "info": {
+      "name": "快捷键",
+      "video": {
+        "name": "视频",
+        "play_pause": "播放 / 暂停",
+        "back_10_seconds": "-10 秒",
+        "back_3_seconds": "-3 秒",
+        "forward_10_seconds": "+10 秒",
+        "forward_3_seconds": "+3 秒",
+        "fullscreen": "全屏",
+        "add_bookmark": "添加书签"
+      },
+      "subtitle": {
+        "name": "字幕",
+        "page_up": "上翻",
+        "page_down": "下翻",
+        "toggle_auto": "开关自动模式",
+        "toggle_listening_mode": "开关听力模式",
+        "toggle_hide_chinese": "开关隐藏中文",
+        "toggle_settings": "开关设置窗口",
+        "adjust_delay": "调整延迟",
+        "click_time": "点击开始或结束时间",
+        "font_up": "字体加大",
+        "font_down": "字体减小"
+      },
+      "waveform": {
+        "name": "波形图",
+        "toggle_settings": "开关设置窗口",
+        "replay": "重播",
+        "replay_position_left": "重播位置左移",
+        "replay_position_left_quicker": "重播位置左移（快）",
+        "replay_position_right": "重播位置右移",
+        "replay_position_right_quicker": "重播位置右移（快）",
+        "replay_position_at_current_time": "设置当前时间为重播位置"
+      }
+    },
+    "subtitle": {
+      "name": "字幕",
+      "width": "宽度",
+      "auto": "自动模式",
+      "delay": "延迟（秒）",
+      "font_size": "字体大小",
+      "listening_mode": "听力模式",
+      "hide_chinese": "隐藏中文"
+    },
+    "waveform": {
+      "name": "波形图",
+      "disable": "关闭",
+      "enable": "启用",
+      "with_existing": "从现有文件提取",
+      "with_another": "其他文件源",
+      "generating": "波形图生成中，请稍等...",
+      "done": "完成"
+    }
+  },
+  "confirm": {
+    "ok": "确定",
+    "cancel": "取消",
+    "reload_update": "要升级吗？",
+    "cannot_find_file": "找不到文件{0}，从列表里移除吗？",
+    "overwrite_existing_file": "{0}已经存在，要覆盖吗？"
+  },
+  "message": {
+    "ok": "确定"
+  },
+  "error": {
+    "database_initialize": "数据库初始化错误",
+    "video_src_not_supported": "大变！😭<br />你的浏览器不支持这个视频格式。需要先用其他软件转码。<br />比如视频用h264(avc)，音频用mp3，容器用mp4。"
+  },
+  "bookmark": {
+    "edit": "编辑书签",
+    "add_description": "添加备注"
+  }
+}

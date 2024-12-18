@@ -1,0 +1,186 @@
+.container {
+  margin: 20px 10px;
+  user-select: none;
+
+  .upload-area {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--black-025);
+    border-radius: 10px;
+    border: 2px dashed var(--black-150);
+    font-size: 16px;
+    &:global(.drag-over) {
+      box-shadow: var(--bs-md);
+      background: var(--blue-050);
+    }
+
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+
+    :global(.material-icons-outlined) {
+      font-size: 40px;
+      color: var(--blue-600);
+    }
+    .upload-main {
+      color: var(--black-600);
+    }
+    .separate {
+      display: flex;
+      padding: 0 24px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .separate-line {
+        border-top: 1px solid var(--black-200);
+        flex: 1;
+        max-width: 80px;
+      }
+      .separate-or {
+        color: var(--black-200);
+        margin: 0 8px;
+      }
+    }
+    .browse-files {
+      background-color: var(--blue-600);
+      padding: 4px 12px;
+      color: #fff;
+      cursor: pointer;
+      border-width: 0;
+      border-radius: 4px;
+      box-shadow: var(--bs-sm);
+    }
+  }
+
+  .buffer-container {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    .responsive(@rules) {
+      @p: 24px;
+      @rules();
+      @media only screen and (max-width: 700px) {
+        @p: 0px;
+        @rules();
+      }
+    }
+    .responsive({
+      width: calc(100vw - @p * 2);
+      margin-left: calc(-50vw + @p);
+      margin-right: calc(-50vw + @p);
+    });
+  }
+
+  .buffer {
+    max-width: 1600px;
+    margin: 20px auto 10px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+
+    .videos,
+    .subtitles {
+      background: var(--bc-lighter);
+      padding: 5px 5px 0 5px;
+      touch-action: none;
+      user-select: none;
+
+      & > :global(.material-icons) {
+        text-align: center;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      ul.has-transition {
+        li {
+          transition: top 0.15s ease;
+          /* transition: top 5s ease; */
+          &.selected {
+            transition: none;
+          }
+        }
+      }
+
+      li {
+        @list-height: 26px;
+        @list-margin-bottom: 5px;
+
+        height: @list-height;
+        background: var(--white);
+        padding: 0 5px;
+        margin-bottom: @list-margin-bottom;
+        white-space: nowrap;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 16px 16px 16px;
+        gap: 2px;
+        align-items: center;
+        cursor: move;
+
+        position: relative;
+        top: 0;
+        &.selected {
+          background: var(--blue-100);
+          z-index: 2;
+        }
+
+        &.upward {
+          top: -@list-height - @list-margin-bottom;
+        }
+        &.downward {
+          top: @list-height + @list-margin-bottom;
+        }
+
+        .file {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: @list-height;
+        }
+        & > :global(.material-icons) {
+          font-size: 14px;
+          padding: 1px 0;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 8px;
+          background-color: var(--black-200);
+          color: var(--white);
+          @media (hover: hover) {
+            &:hover {
+              background-color: var(--black-500);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .save-cache {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    input {
+      margin: 0 8px 0 0;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .ok {
+    display: flex;
+    justify-content: center;
+    button {
+      border-width: 0;
+      border-radius: 4px;
+      background: var(--blue-600);
+      color: #fff;
+      padding: 4px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: var(--bs-sm);
+    }
+  }
+}

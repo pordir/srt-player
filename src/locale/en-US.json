@@ -1,0 +1,96 @@
+{
+  "import_video_and_subtitle": {
+    "drag": "Drag video and subtitle files here",
+    "browse": "Browse files",
+    "or": "OR",
+    "save": "Save",
+    "save_cache": "Copy file(s) to cache"
+  },
+  "play_list": {
+    "download_example": "There is currently no videos in the play list, would you like to download some examples?",
+    "example": "Example {0}",
+    "downloading": "Downloading..."
+  },
+  "footer": {
+    "current_version": "Current version",
+    "update": "Update",
+    "feedback": "Feedback",
+    "feedback_email": "Encountered bugs? Having suggestions? Or if you have any question regarding this app, you can send your feedback via email here:",
+    "feedback_video": "Or you can comment here:",
+    "video_url": "https://youtu.be/ZPnu17pJsIo"
+  },
+  "nav": {
+    "info": {
+      "name": "Shortcuts",
+      "video": {
+        "name": "Video",
+        "play_pause": "Play / pause",
+        "back_10_seconds": "-10 s",
+        "back_3_seconds": "-3 s",
+        "forward_10_seconds": "+10 s",
+        "forward_3_seconds": "+3 s",
+        "fullscreen": "Fullscreen",
+        "add_bookmark": "Add bookmark"
+      },
+      "subtitle": {
+        "name": "Subtitle",
+        "page_up": "Page up",
+        "page_down": "Page down",
+        "toggle_auto": "Toggle auto",
+        "toggle_listening_mode": "Toggle listening mode",
+        "toggle_hide_chinese": "Toggle hide Chinese",
+        "toggle_settings": "Toggle settings",
+        "adjust_delay": "Adjust delay",
+        "click_time": "Click start or end time",
+        "font_up": "Increase font size",
+        "font_down": "Decrease font size"
+      },
+      "waveform": {
+        "name": "Waveform",
+        "toggle_settings": "Toggle settings",
+        "replay": "Replay",
+        "replay_position_left": "Replay position left",
+        "replay_position_left_quicker": "Replay position left (quicker)",
+        "replay_position_right": "Replay position right",
+        "replay_position_right_quicker": "Replay position right (quicker)",
+        "replay_position_at_current_time": "Replay position at current time"
+      }
+    },
+    "subtitle": {
+      "name": "Subtitle",
+      "width": "Width",
+      "auto": "Auto mode",
+      "delay": "Delay (seconds)",
+      "font_size": "Font size",
+      "listening_mode": "Listening mode",
+      "hide_chinese": "Hide Chinese"
+    },
+    "waveform": {
+      "name": "Waveform",
+      "disable": "Disable",
+      "enable": "Enable",
+      "with_existing": "Using existing file",
+      "with_another": "Using another file",
+      "generating": "Generating waveform, this might take a while...",
+      "done": "Done"
+    }
+  },
+  "confirm": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "reload_update": "Reload to update?",
+    "cannot_find_file": "Cannot find {0}, remove it from list?",
+    "overwrite_existing_file": "{0} already exsit(s), overwrite?"
+  },
+  "message": {
+    "ok": "OK"
+  },
+  "error": {
+    "database_initialize": "Failed to initialize database",
+    "video_src_not_supported": "Sorry, this video's format is not supported in your broswer.<br />You need to convert it to a compatible format first using other software such <a href=\"https://handbrake.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">HandBrake</a> or ffmpeg.<br />Example format: h264(avc) for video, mp3 for audio and mp4 for container."
+  },
+  "bookmark": {
+    "edit": "Edit bookmarks",
+    "add_description": "Add description"
+  }
+}
